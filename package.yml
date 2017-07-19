@@ -1,0 +1,22 @@
+name       : peek
+version    : 1.0.3
+release    : 1
+source     :
+    - https://github.com/phw/peek/archive/v1.0.3.tar.gz : bedb23a4da0b6f5c9e247a383435202ff7307347f39cd8816d256b3390a4c1ae
+license    : GPL-3.0
+component  : multimedia.video
+summary    : Simple animated GIF screen recorder with an easy to use interface 
+description: |
+    Simple animated GIF screen recorder with an easy to use interface 
+builddeps  :    
+    - pkgconfig(ImageMagick)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(libavformat)
+    - pkgconfig(keybinder-3.0) 
+    - vala
+setup      : |
+    %cmake
+build      : |
+    %make
+install    : |
+    %make_install
